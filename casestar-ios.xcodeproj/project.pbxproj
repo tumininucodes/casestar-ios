@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		177EBE34298A400100992F32 /* casestar_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE33298A400100992F32 /* casestar_iosApp.swift */; };
-		177EBE36298A400100992F32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE35298A400100992F32 /* ContentView.swift */; };
+		177EBE36298A400100992F32 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE35298A400100992F32 /* HomeView.swift */; };
 		177EBE38298A400100992F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 177EBE37298A400100992F32 /* Assets.xcassets */; };
 		177EBE3B298A400100992F32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 177EBE3A298A400100992F32 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		177EBE30298A400100992F32 /* casestar-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "casestar-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		177EBE33298A400100992F32 /* casestar_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = casestar_iosApp.swift; sourceTree = "<group>"; };
-		177EBE35298A400100992F32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		177EBE35298A400100992F32 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		177EBE37298A400100992F32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		177EBE3A298A400100992F32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,8 +51,11 @@
 		177EBE32298A400100992F32 /* casestar-ios */ = {
 			isa = PBXGroup;
 			children = (
+				177EBE44298A417A00992F32 /* Models */,
+				177EBE43298A416F00992F32 /* Utils */,
+				177EBE42298A416400992F32 /* Services */,
+				177EBE41298A406400992F32 /* Views */,
 				177EBE33298A400100992F32 /* casestar_iosApp.swift */,
-				177EBE35298A400100992F32 /* ContentView.swift */,
 				177EBE37298A400100992F32 /* Assets.xcassets */,
 				177EBE39298A400100992F32 /* Preview Content */,
 			);
@@ -65,6 +68,35 @@
 				177EBE3A298A400100992F32 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		177EBE41298A406400992F32 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				177EBE35298A400100992F32 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		177EBE42298A416400992F32 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		177EBE43298A416F00992F32 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		177EBE44298A417A00992F32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				177EBE36298A400100992F32 /* ContentView.swift in Sources */,
+				177EBE36298A400100992F32 /* HomeView.swift in Sources */,
 				177EBE34298A400100992F32 /* casestar_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
