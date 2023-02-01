@@ -11,15 +11,35 @@ struct HomeView: View {
     
     @State var searchText: String = ""
     
+    let data = (1...100).map { "Item \($0)" }
+
+        let columns = [
+            GridItem(.adaptive(minimum: 80))
+        ]
+    
     var body: some View {
+        
         NavigationView {
             VStack {
-                Text("Hello, world!")
-                    .padding()
                 
-                Spacer()
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(data, id: \.self) { item in
+                            Text(item)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+                
             }
-            .navigationTitle("Casestar")
+            .navigationBarItems(leading:NavigationLink(destination: FavoritesView(), label: {
+                Text("Favorites")
+                    .foregroundColor(.accentColor)
+            }), trailing: NavigationLink(destination: AboutView(), label: {
+                Text("Credits")
+                    .foregroundColor(.accentColor)
+            }))
+            .navigationTitle("Popular Movies")
         }
         .searchable(text: $searchText)
         .preferredColorScheme(.dark)

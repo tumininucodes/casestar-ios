@@ -11,14 +11,18 @@
 		177EBE36298A400100992F32 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE35298A400100992F32 /* HomeView.swift */; };
 		177EBE38298A400100992F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 177EBE37298A400100992F32 /* Assets.xcassets */; };
 		177EBE3B298A400100992F32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 177EBE3A298A400100992F32 /* Preview Assets.xcassets */; };
+		177EBE46298A45E800992F32 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE45298A45E800992F32 /* AboutView.swift */; };
+		177EBE48298A550300992F32 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE47298A550300992F32 /* FavoritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		177EBE30298A400100992F32 /* casestar-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "casestar-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		177EBE30298A400100992F32 /* Casestar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Casestar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		177EBE33298A400100992F32 /* casestar_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = casestar_iosApp.swift; sourceTree = "<group>"; };
 		177EBE35298A400100992F32 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		177EBE37298A400100992F32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		177EBE3A298A400100992F32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		177EBE45298A45E800992F32 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		177EBE47298A550300992F32 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +47,7 @@
 		177EBE31298A400100992F32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				177EBE30298A400100992F32 /* casestar-ios.app */,
+				177EBE30298A400100992F32 /* Casestar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				177EBE35298A400100992F32 /* HomeView.swift */,
+				177EBE45298A45E800992F32 /* AboutView.swift */,
+				177EBE47298A550300992F32 /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,7 +122,7 @@
 			);
 			name = "casestar-ios";
 			productName = "casestar-ios";
-			productReference = 177EBE30298A400100992F32 /* casestar-ios.app */;
+			productReference = 177EBE30298A400100992F32 /* Casestar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -169,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177EBE48298A550300992F32 /* FavoritesView.swift in Sources */,
 				177EBE36298A400100992F32 /* HomeView.swift in Sources */,
+				177EBE46298A45E800992F32 /* AboutView.swift in Sources */,
 				177EBE34298A400100992F32 /* casestar_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,7 +321,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tumi.casestar-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Casestar;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,7 +350,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tumi.casestar-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Casestar;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
