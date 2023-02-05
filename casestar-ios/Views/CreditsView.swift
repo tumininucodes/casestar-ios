@@ -7,15 +7,20 @@
 
 import SwiftUI
 
-struct AboutView: View {
+struct CreditsView: View {
     var body: some View {
         VStack {
             VStack {
                 Text("Designed and developed by")
                 Image("profileImg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 100)
+                    .clipShape(Circle())
                 Text("Tumi Ojo")
+                    .bold()
             }
-            
+            Spacer()
         }
         .navigationTitle("Credits")
     }

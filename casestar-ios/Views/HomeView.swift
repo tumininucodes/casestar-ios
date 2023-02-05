@@ -35,7 +35,7 @@ struct HomeView: View {
             .navigationBarItems(leading:NavigationLink(destination: FavoritesView(), label: {
                 Text("Favorites")
                     .foregroundColor(.accentColor)
-            }), trailing: NavigationLink(destination: AboutView(), label: {
+            }), trailing: NavigationLink(destination: CreditsView(), label: {
                 Text("Credits")
                     .foregroundColor(.accentColor)
             }))
