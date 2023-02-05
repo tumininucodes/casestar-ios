@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17674ECD298FAF9A00E18834 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17674ECC298FAF9A00E18834 /* MovieView.swift */; };
 		177EBE34298A400100992F32 /* casestar_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE33298A400100992F32 /* casestar_iosApp.swift */; };
 		177EBE36298A400100992F32 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE35298A400100992F32 /* HomeView.swift */; };
 		177EBE38298A400100992F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 177EBE37298A400100992F32 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17674ECC298FAF9A00E18834 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		177EBE30298A400100992F32 /* Casestar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Casestar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		177EBE33298A400100992F32 /* casestar_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = casestar_iosApp.swift; sourceTree = "<group>"; };
 		177EBE35298A400100992F32 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				177EBE35298A400100992F32 /* HomeView.swift */,
 				177EBE45298A45E800992F32 /* CreditsView.swift */,
 				177EBE47298A550300992F32 /* FavoritesView.swift */,
+				17674ECC298FAF9A00E18834 /* MovieView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17674ECD298FAF9A00E18834 /* MovieView.swift in Sources */,
 				177EBE48298A550300992F32 /* FavoritesView.swift in Sources */,
 				177EBE36298A400100992F32 /* HomeView.swift in Sources */,
 				177EBE46298A45E800992F32 /* CreditsView.swift in Sources */,
