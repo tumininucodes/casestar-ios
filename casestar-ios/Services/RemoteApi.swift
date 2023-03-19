@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import Combine
 
 
 struct RemoteApi {
@@ -23,12 +24,39 @@ struct RemoteApi {
     
     var decoder: JSONDecoder {
         get {
-            let formatter = DateFormatter()
             let decoder = JSONDecoder()
             return decoder
         }
     }
     
+    func fetchMovies(page: Int) -> AnyPublisher<MovieResponse?, Error> {
+        let params:[String: Any] = [
+            "api-key": "703b66873479afc02f4d7afd1ae87125",
+            "language": "en-US",
+            "page": page,
+        ]
+        return AF.request(base.appendingPathComponent("movie/popular"), method: .get, parameters: params, encoding: URLEncoding.queryString, headers: self.headers())
+            .publishDecodable(type: MovieResponse.self, decoder: decoder)
+            .tryCompactMap { (response) -> MovieResponse? in
+                if let error = response.error { throw error }
+                return response.value
+            }.eraseToAnyPublisher()
+    }
+    
+    
+    func fetchMovieVideos(movieId: String) -> AnyPublisher<MovieResponse?, Error> {
+        let params:[String: Any] = [
+            "api-key": "703b66873479afc02f4d7afd1ae87125",
+            "language": "en-US",
+            "movieId": movieId,
+        ]
+        return AF.request(base.appendingPathComponent("movie/\(movieId)/videos"), method: .get, parameters: params, encoding: URLEncoding.queryString, headers: self.headers())
+            .publishDecodable(type: MovieResponse.self, decoder: decoder)
+            .tryCompactMap { (response) -> MovieResponse? in
+                if let error = response.error { throw error }
+                return response.value
+            }.eraseToAnyPublisher()
+    }
     
     
     

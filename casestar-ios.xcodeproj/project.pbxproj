@@ -16,6 +16,7 @@
 		177EBE3B298A400100992F32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 177EBE3A298A400100992F32 /* Preview Assets.xcassets */; };
 		177EBE46298A45E800992F32 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE45298A45E800992F32 /* CreditsView.swift */; };
 		177EBE48298A550300992F32 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE47298A550300992F32 /* FavoritesView.swift */; };
+		17BB8CF329C6F05500C07733 /* ApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB8CF229C6F05500C07733 /* ApiResponses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		177EBE3A298A400100992F32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		177EBE45298A45E800992F32 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		177EBE47298A550300992F32 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		17BB8CF229C6F05500C07733 /* ApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		177EBE44298A417A00992F32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				17BB8CF229C6F05500C07733 /* ApiResponses.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BB8CF329C6F05500C07733 /* ApiResponses.swift in Sources */,
 				177C25F329C5912600B80C5A /* RemoteApi.swift in Sources */,
 				17674ECD298FAF9A00E18834 /* MovieView.swift in Sources */,
 				177EBE48298A550300992F32 /* FavoritesView.swift in Sources */,
