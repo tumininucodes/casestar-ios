@@ -44,21 +44,50 @@ struct RemoteApi {
     }
     
     
-    func fetchMovieVideos(movieId: String) -> AnyPublisher<MovieResponse?, Error> {
+    func fetchMovieVideos(movieId: String) -> AnyPublisher<MovieVideosResponse?, Error> {
         let params:[String: Any] = [
             "api-key": "703b66873479afc02f4d7afd1ae87125",
             "language": "en-US",
             "movieId": movieId,
         ]
         return AF.request(base.appendingPathComponent("movie/\(movieId)/videos"), method: .get, parameters: params, encoding: URLEncoding.queryString, headers: self.headers())
-            .publishDecodable(type: MovieResponse.self, decoder: decoder)
-            .tryCompactMap { (response) -> MovieResponse? in
+            .publishDecodable(type: MovieVideosResponse.self, decoder: decoder)
+            .tryCompactMap { (response) -> MovieVideosResponse? in
                 if let error = response.error { throw error }
                 return response.value
             }.eraseToAnyPublisher()
     }
     
     
+    func searchMovie(query: String) -> AnyPublisher<MovieSearchResponse?, Error> {
+        let params:[String: Any] = [
+            "api-key": "703b66873479afc02f4d7afd1ae87125",
+            "language": "en-US",
+            "query": query,
+            "include_adult": "false",
+        ]
+        return AF.request(base.appendingPathComponent("search/movie"), method: .get, parameters: params, encoding: URLEncoding.queryString, headers: self.headers())
+            .publishDecodable(type: MovieSearchResponse.self, decoder: decoder)
+            .tryCompactMap { (response) -> MovieSearchResponse? in
+                if let error = response.error { throw error }
+                return response.value
+            }.eraseToAnyPublisher()
+    }
+    
+    
+    func fetchCast(movieId: String) -> AnyPublisher<CastResponse?, Error> {
+        let params:[String: Any] = [
+            "api-key": "703b66873479afc02f4d7afd1ae87125",
+            "language": "en-US",
+            "movieId": movieId,
+        ]
+        return AF.request(base.appendingPathComponent("movie/\(movieId)/credits"), method: .get, parameters: params, encoding: URLEncoding.queryString, headers: self.headers())
+            .publishDecodable(type: CastResponse.self, decoder: decoder)
+            .tryCompactMap { (response) -> CastResponse? in
+                if let error = response.error { throw error }
+                return response.value
+            }.eraseToAnyPublisher()
+    }
     
     
 }

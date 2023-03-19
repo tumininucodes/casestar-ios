@@ -43,5 +43,20 @@ struct CastResponse: Codable {
 
 struct MovieSearchResponse: Codable {
     var page: Int?
-    var results: List<Movie>
+    var results: [Movie]
 }
+
+
+struct MovieVideos: Codable {
+    var id: String
+    var name: String?
+    var key: String?
+}
+
+
+struct MovieVideosResponse: Codable {
+    var page: Int?
+    var results: [MovieVideos]
+}
+
+
