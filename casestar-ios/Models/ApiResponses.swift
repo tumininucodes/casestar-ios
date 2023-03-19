@@ -13,7 +13,7 @@ struct MovieResponse: Codable {
 }
 
 
-struct Movie: Codable {
+struct Movie: Codable, Hashable {
     var id: Int = 0
     var title: String = ""
     var overview: String?

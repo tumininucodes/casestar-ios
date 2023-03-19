@@ -18,6 +18,7 @@
 		177EBE48298A550300992F32 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE47298A550300992F32 /* FavoritesView.swift */; };
 		17BB8CF329C6F05500C07733 /* ApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB8CF229C6F05500C07733 /* ApiResponses.swift */; };
 		17BB8CF629C6F9BE00C07733 /* MainVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB8CF529C6F9BE00C07733 /* MainVIewModel.swift */; };
+		17BB8CF929C71F8F00C07733 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB8CF829C71F8F00C07733 /* FloatingActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		177EBE47298A550300992F32 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		17BB8CF229C6F05500C07733 /* ApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponses.swift; sourceTree = "<group>"; };
 		17BB8CF529C6F9BE00C07733 /* MainVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIewModel.swift; sourceTree = "<group>"; };
+		17BB8CF829C71F8F00C07733 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		177EBE41298A406400992F32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				17BB8CF729C71F7E00C07733 /* Components */,
 				177EBE35298A400100992F32 /* HomeView.swift */,
 				177EBE45298A45E800992F32 /* CreditsView.swift */,
 				177EBE47298A550300992F32 /* FavoritesView.swift */,
@@ -125,6 +128,14 @@
 				17BB8CF529C6F9BE00C07733 /* MainVIewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		17BB8CF729C71F7E00C07733 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				17BB8CF829C71F8F00C07733 /* FloatingActionButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				177EBE36298A400100992F32 /* HomeView.swift in Sources */,
 				177EBE46298A45E800992F32 /* CreditsView.swift in Sources */,
 				177EBE34298A400100992F32 /* casestar_iosApp.swift in Sources */,
+				17BB8CF929C71F8F00C07733 /* FloatingActionButton.swift in Sources */,
 				17BB8CF629C6F9BE00C07733 /* MainVIewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
