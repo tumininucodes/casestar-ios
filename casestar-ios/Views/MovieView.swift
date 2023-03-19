@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct MovieView: View {
     
     var imageString: String
@@ -18,11 +19,15 @@ struct MovieView: View {
             
             AsyncImage(url: URL(string: imageString)) { image in
                 image.resizable()
+                    .imageScale(.small)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 100, height: 150, alignment: .center)
             } placeholder: {
                 Image("picture")
                     .resizable()
                     .renderingMode(.template)
                     .foregroundColor(.white)
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20, alignment: .center)
     
             }
@@ -32,8 +37,11 @@ struct MovieView: View {
             Spacer().frame(height: 10)
             
             Text(title)
+                .lineLimit(3)
+                .frame(height: 60)
             
         }
-        
     }
+    
+   
 }

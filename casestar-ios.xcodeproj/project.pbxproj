@@ -17,6 +17,7 @@
 		177EBE46298A45E800992F32 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE45298A45E800992F32 /* CreditsView.swift */; };
 		177EBE48298A550300992F32 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE47298A550300992F32 /* FavoritesView.swift */; };
 		17BB8CF329C6F05500C07733 /* ApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB8CF229C6F05500C07733 /* ApiResponses.swift */; };
+		17BB8CF629C6F9BE00C07733 /* MainVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB8CF529C6F9BE00C07733 /* MainVIewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		177EBE45298A45E800992F32 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		177EBE47298A550300992F32 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		17BB8CF229C6F05500C07733 /* ApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponses.swift; sourceTree = "<group>"; };
+		17BB8CF529C6F9BE00C07733 /* MainVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				177EBE41298A406400992F32 /* Views */,
 				177EBE33298A400100992F32 /* casestar_iosApp.swift */,
 				177EBE37298A400100992F32 /* Assets.xcassets */,
+				17BB8CF429C6F99B00C07733 /* ViewModel */,
 				177EBE39298A400100992F32 /* Preview Content */,
 			);
 			path = "casestar-ios";
@@ -114,6 +117,14 @@
 				17BB8CF229C6F05500C07733 /* ApiResponses.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		17BB8CF429C6F99B00C07733 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				17BB8CF529C6F9BE00C07733 /* MainVIewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 				177EBE36298A400100992F32 /* HomeView.swift in Sources */,
 				177EBE46298A45E800992F32 /* CreditsView.swift in Sources */,
 				177EBE34298A400100992F32 /* casestar_iosApp.swift in Sources */,
+				17BB8CF629C6F9BE00C07733 /* MainVIewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

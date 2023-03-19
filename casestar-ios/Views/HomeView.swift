@@ -9,7 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @StateObject var mainVM = MainVIewModel()
     @State var searchText: String = ""
+    @State var pageCounter: Int = 1
+    
     
     let data = (1...100).map { "Item \($0)" }
     
@@ -26,11 +29,26 @@ struct HomeView: View {
                 
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(data, id: \.self) { item in
-                            MovieView(imageString: "https://lumiere-a.akamaihd.net/v1/images/pp_disney_blackpanther_wakandaforever_1289_d3419b8f.jpeg", title: "Title")
+                        ForEach(mainVM.movies, id: \.id) { movie in
+                            MovieView(imageString: "https://image.tmdb.org/t/p/original\(movie.poster_path ?? "")", title: movie.title)
+                                .onAppear {
+                                    let lastMovie = (pageCounter * 20) - pageCounter
+                                    print(lastMovie)
+                                    print(mainVM.movies.count)
+                                    if lastMovie == mainVM.movies.firstIndex(where: { $0.id == movie.id }) {
+                                        print("========== fetching more ============")
+                                        pageCounter += 1
+                                        mainVM.getMovies(page: pageCounter)
+                                    }
+                                }
                         }
                     }
                     .padding(.horizontal)
+                    
+                }
+                
+                if mainVM.isLoading && !mainVM.movies.isEmpty {
+                    ProgressView()
                 }
                 
             }

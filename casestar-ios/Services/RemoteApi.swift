@@ -31,9 +31,9 @@ struct RemoteApi {
     
     func fetchMovies(page: Int) -> AnyPublisher<MovieResponse?, Error> {
         let params:[String: Any] = [
-            "api-key": "703b66873479afc02f4d7afd1ae87125",
+            "api_key": "703b66873479afc02f4d7afd1ae87125",
             "language": "en-US",
-            "page": page,
+            "page": "\(page)",
         ]
         return AF.request(base.appendingPathComponent("movie/popular"), method: .get, parameters: params, encoding: URLEncoding.queryString, headers: self.headers())
             .publishDecodable(type: MovieResponse.self, decoder: decoder)
@@ -46,7 +46,7 @@ struct RemoteApi {
     
     func fetchMovieVideos(movieId: String) -> AnyPublisher<MovieVideosResponse?, Error> {
         let params:[String: Any] = [
-            "api-key": "703b66873479afc02f4d7afd1ae87125",
+            "api_key": "703b66873479afc02f4d7afd1ae87125",
             "language": "en-US",
             "movieId": movieId,
         ]
@@ -61,7 +61,7 @@ struct RemoteApi {
     
     func searchMovie(query: String) -> AnyPublisher<MovieSearchResponse?, Error> {
         let params:[String: Any] = [
-            "api-key": "703b66873479afc02f4d7afd1ae87125",
+            "api_key": "703b66873479afc02f4d7afd1ae87125",
             "language": "en-US",
             "query": query,
             "include_adult": "false",
@@ -77,7 +77,7 @@ struct RemoteApi {
     
     func fetchCast(movieId: String) -> AnyPublisher<CastResponse?, Error> {
         let params:[String: Any] = [
-            "api-key": "703b66873479afc02f4d7afd1ae87125",
+            "api_key": "703b66873479afc02f4d7afd1ae87125",
             "language": "en-US",
             "movieId": movieId,
         ]
