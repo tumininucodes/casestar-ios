@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		175EFCEB29C8234600218692 /* AboutMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EFCEA29C8234600218692 /* AboutMovieView.swift */; };
 		17674ECD298FAF9A00E18834 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17674ECC298FAF9A00E18834 /* MovieView.swift */; };
 		177C25F129C5910F00B80C5A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 177C25F029C5910F00B80C5A /* Alamofire */; };
 		177C25F329C5912600B80C5A /* RemoteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C25F229C5912600B80C5A /* RemoteApi.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		175EFCEA29C8234600218692 /* AboutMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMovieView.swift; sourceTree = "<group>"; };
 		17674ECC298FAF9A00E18834 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		177C25F229C5912600B80C5A /* RemoteApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApi.swift; sourceTree = "<group>"; };
 		177EBE30298A400100992F32 /* Casestar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Casestar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 				177EBE45298A45E800992F32 /* CreditsView.swift */,
 				177EBE47298A550300992F32 /* FavoritesView.swift */,
 				17674ECC298FAF9A00E18834 /* MovieView.swift */,
+				175EFCEA29C8234600218692 /* AboutMovieView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				177EBE48298A550300992F32 /* FavoritesView.swift in Sources */,
 				177EBE36298A400100992F32 /* HomeView.swift in Sources */,
 				177EBE46298A45E800992F32 /* CreditsView.swift in Sources */,
+				175EFCEB29C8234600218692 /* AboutMovieView.swift in Sources */,
 				177EBE34298A400100992F32 /* casestar_iosApp.swift in Sources */,
 				17BB8CF929C71F8F00C07733 /* FloatingActionButton.swift in Sources */,
 				17BB8CF629C6F9BE00C07733 /* MainVIewModel.swift in Sources */,

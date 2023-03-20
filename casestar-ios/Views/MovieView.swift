@@ -38,6 +38,7 @@ struct MovieView: View {
             
             Text(title)
                 .lineLimit(3)
+                .foregroundColor(.white)
                 .frame(height: 60)
             
         }

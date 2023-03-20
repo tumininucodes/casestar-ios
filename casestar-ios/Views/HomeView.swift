@@ -29,14 +29,19 @@ struct HomeView: View {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(mainVM.movies, id: \.id) { movie in
-                                MovieView(imageString: "https://image.tmdb.org/t/p/original\(movie.poster_path ?? "")", title: movie.title)
-                                    .onAppear {
-                                        let lastMovie = (pageCounter * 20) - pageCounter
-                                        if lastMovie == mainVM.movies.firstIndex(where: { $0.id == movie.id }) {
-                                            pageCounter += 1
-                                            mainVM.getMovies(page: pageCounter)
+                                NavigationLink {
+                                    AboutMovieView()
+                                } label: {
+                                    MovieView(imageString: "https://image.tmdb.org/t/p/original\(movie.poster_path ?? "")", title: movie.title)
+                                        .onAppear {
+                                            let lastMovie = (pageCounter * 20) - pageCounter
+                                            if lastMovie == mainVM.movies.firstIndex(where: { $0.id == movie.id }) {
+                                                pageCounter += 1
+                                                mainVM.getMovies(page: pageCounter)
+                                            }
                                         }
-                                    }
+                                }
+                               
                             }
                         }
                         .onChange(of: scrollChanger, perform: { newValue in
