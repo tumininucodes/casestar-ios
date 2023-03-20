@@ -27,12 +27,9 @@ class MainVIewModel: ObservableObject {
             }, receiveValue: { response in
                 var results = response?.results
                 if response?.page == 1 {
-                    print(response?.results)
                     self.movies.append(contentsOf: response?.results ?? [])
                 } else {
-                    print("===============shoudl remove ================")
                     results?.removeFirst()
-                    print(results)
                     self.movies.append(contentsOf: results ?? [])
                 }
                 

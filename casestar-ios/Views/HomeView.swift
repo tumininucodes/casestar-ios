@@ -30,7 +30,7 @@ struct HomeView: View {
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(mainVM.movies, id: \.id) { movie in
                                 NavigationLink {
-                                    AboutMovieView()
+                                    AboutMovieView(movie: movie)
                                 } label: {
                                     MovieView(imageString: "https://image.tmdb.org/t/p/original\(movie.poster_path ?? "")", title: movie.title)
                                         .onAppear {
@@ -40,16 +40,18 @@ struct HomeView: View {
                                                 mainVM.getMovies(page: pageCounter)
                                             }
                                         }
+                                        .id(movie)
                                 }
                                
                             }
                         }
                         .onChange(of: scrollChanger, perform: { newValue in
-                            proxy.scrollTo(mainVM.movies.first?.id)
+                            proxy.scrollTo(mainVM.movies[0], anchor: .top)
                         })
                         .padding(.horizontal)
                         
                     }
+                    
                     
                     
                 }
