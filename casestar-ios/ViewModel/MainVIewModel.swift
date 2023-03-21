@@ -13,8 +13,10 @@ class MainVIewModel: ObservableObject {
     var remoteApi = RemoteApi()
     @Published var isLoading = false
     @Published var isCastLoading = false
+    @Published var isVideoLoading = false
     @Published var movies = Array<Movie>()
     @Published var cast = Array<Actor>()
+    @Published var videos = Array<MovieVideos>()
     
     init() {
         getMovies(page: 1)
@@ -46,6 +48,17 @@ class MainVIewModel: ObservableObject {
                 self.isCastLoading = false
             }, receiveValue: { response in
                 self.cast = response?.cast ?? []
+            }).store(in: &cancellables)
+    }
+    
+    func getMovieVideo(movieId: String) {
+        isVideoLoading = true
+        remoteApi.fetchMovieVideos(movieId: movieId)
+            .receive(on: DispatchQueue.main)
+            .sink (receiveCompletion: {_ in
+                self.isVideoLoading = false
+            }, receiveValue: { response in
+                self.videos = response?.results ?? []
             }).store(in: &cancellables)
     }
     

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct AboutMovieView: View {
     
@@ -18,9 +19,20 @@ struct AboutMovieView: View {
             
             VStack(alignment: .leading) {
                 
-                // TODO()
+                
+                if !mainVM.videos.isEmpty {
 
-                Spacer().frame(height: 120)
+                    YouTubeView(videoId: mainVM.videos.first { $0.name?.contains("official trailer") ?? false }?.key ?? mainVM.videos.first?.key ?? "")
+                        .onAppear  {
+                            print("==============")
+                            print(mainVM.videos)
+                            print(mainVM.videos.first { $0.name?.contains("official trailer") ?? false }?.key ?? "")
+                        }
+                        .frame(height: 200)
+                }
+
+
+                Spacer().frame(height: 20)
                 
                 Text(movie.title)
                     .bold()
@@ -132,10 +144,28 @@ struct AboutMovieView: View {
                 
             }
             
+
+            
         }
         .onAppear {
             mainVM.getCast(movieId: movie.id.description)
+            mainVM.getMovieVideo(movieId: movie.id.description)
         }
         
+        
+    }
+}
+
+
+
+struct YouTubeView: UIViewRepresentable {
+    let videoId: String
+    func makeUIView(context: Context) ->  WKWebView {
+        return WKWebView()
+    }
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        guard let demoURL = URL(string: "https://www.youtube.com/embed/\(videoId)") else { return }
+        uiView.scrollView.isScrollEnabled = false
+        uiView.load(URLRequest(url: demoURL))
     }
 }
