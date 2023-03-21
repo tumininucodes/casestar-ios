@@ -12,7 +12,9 @@ class MainVIewModel: ObservableObject {
     var cancellables = Set<AnyCancellable>()
     var remoteApi = RemoteApi()
     @Published var isLoading = false
+    @Published var isCastLoading = false
     @Published var movies = Array<Movie>()
+    @Published var cast = Array<Actor>()
     
     init() {
         getMovies(page: 1)
@@ -33,6 +35,17 @@ class MainVIewModel: ObservableObject {
                     self.movies.append(contentsOf: results ?? [])
                 }
                 
+            }).store(in: &cancellables)
+    }
+    
+    func getCast(movieId: String) {
+        isCastLoading = true
+        remoteApi.fetchCast(movieId: movieId)
+            .receive(on: DispatchQueue.main)
+            .sink (receiveCompletion: {_ in
+                self.isCastLoading = false
+            }, receiveValue: { response in
+                self.cast = response?.cast ?? []
             }).store(in: &cancellables)
     }
     

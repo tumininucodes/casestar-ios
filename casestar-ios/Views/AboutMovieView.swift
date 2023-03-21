@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AboutMovieView: View {
+    
+    @StateObject var mainVM = MainVIewModel()
     var movie: Movie
     
     var body: some View {
@@ -108,9 +110,22 @@ struct AboutMovieView: View {
                 .padding([.leading, .trailing], 10)
                 .foregroundColor(.white)
             
+            
             ScrollView {
                 LazyHStack {
-                    
+                    ForEach(mainVM.cast, id: \.id) { person in
+                        ActorView(imageString: "https://image.tmdb.org/t/p/original\(person.profile_path ?? "")", title: person.name ?? "")
+//                            MovieView(imageString: "https://image.tmdb.org/t/p/original\(movie.poster_path ?? "")", title: movie.title)
+//                                .onAppear {
+//                                    let lastMovie = (pageCounter * 20) - pageCounter
+//                                    if lastMovie == mainVM.movies.firstIndex(where: { $0.id == movie.id }) {
+//                                        pageCounter += 1
+//                                        mainVM.getMovies(page: pageCounter)
+//                                    }
+//                                }
+//                                .id(movie)
+                       
+                    }
                 }
             }
             

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		175EFCEB29C8234600218692 /* AboutMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EFCEA29C8234600218692 /* AboutMovieView.swift */; };
 		17674ECD298FAF9A00E18834 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17674ECC298FAF9A00E18834 /* MovieView.swift */; };
+		176FD93129C940EA00F61D6D /* ActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FD93029C940EA00F61D6D /* ActorView.swift */; };
 		177C25F129C5910F00B80C5A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 177C25F029C5910F00B80C5A /* Alamofire */; };
 		177C25F329C5912600B80C5A /* RemoteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177C25F229C5912600B80C5A /* RemoteApi.swift */; };
 		177EBE34298A400100992F32 /* casestar_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EBE33298A400100992F32 /* casestar_iosApp.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		175EFCEA29C8234600218692 /* AboutMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMovieView.swift; sourceTree = "<group>"; };
 		17674ECC298FAF9A00E18834 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		176FD93029C940EA00F61D6D /* ActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorView.swift; sourceTree = "<group>"; };
 		177C25F229C5912600B80C5A /* RemoteApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApi.swift; sourceTree = "<group>"; };
 		177EBE30298A400100992F32 /* Casestar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Casestar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		177EBE33298A400100992F32 /* casestar_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = casestar_iosApp.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				17BB8CF829C71F8F00C07733 /* FloatingActionButton.swift */,
+				176FD93029C940EA00F61D6D /* ActorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				17BB8CF329C6F05500C07733 /* ApiResponses.swift in Sources */,
 				177C25F329C5912600B80C5A /* RemoteApi.swift in Sources */,
+				176FD93129C940EA00F61D6D /* ActorView.swift in Sources */,
 				17674ECD298FAF9A00E18834 /* MovieView.swift in Sources */,
 				177EBE48298A550300992F32 /* FavoritesView.swift in Sources */,
 				177EBE36298A400100992F32 /* HomeView.swift in Sources */,
