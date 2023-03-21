@@ -42,7 +42,7 @@ struct HomeView: View {
                                         }
                                         .id(movie)
                                 }
-                               
+                                                               
                             }
                         }
                         .onChange(of: scrollChanger, perform: { newValue in
@@ -58,16 +58,16 @@ struct HomeView: View {
                 
                 
             }
-            .floatingActionButton(
-                color: .accentColor,
-                image: Image(systemName: "chevron.left.2")
-                    .rotationEffect(.degrees(90))
-                    .foregroundColor(.white)
-            ) {
-                print("fab clicked")
-                scrollChanger += 1
-                
-            }
+//            .floatingActionButton(
+//                color: .accentColor,
+//                image: Image(systemName: "chevron.left.2")
+//                    .rotationEffect(.degrees(90))
+//                    .foregroundColor(.white)
+//            ) {
+//                print("fab clicked")
+//                scrollChanger += 1
+//
+//            }
             .navigationBarItems(leading:NavigationLink(destination: FavoritesView(), label: {
                 Text("Favorites")
                     .foregroundColor(.accentColor)

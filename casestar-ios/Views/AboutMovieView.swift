@@ -15,7 +15,7 @@ struct AboutMovieView: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             
             VStack(alignment: .leading) {
                 
@@ -131,7 +131,7 @@ struct AboutMovieView: View {
                     .foregroundColor(.white)
                 
                 
-                ScrollView(.horizontal) {
+                ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
                         ForEach(mainVM.cast, id: \.id) { person in
                             ActorView(imageString: "https://image.tmdb.org/t/p/original\(person.profile_path ?? "")", title: person.name ?? "")
@@ -147,11 +147,11 @@ struct AboutMovieView: View {
 
             
         }
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             mainVM.getCast(movieId: movie.id.description)
             mainVM.getMovieVideo(movieId: movie.id.description)
         }
-        
         
     }
 }
