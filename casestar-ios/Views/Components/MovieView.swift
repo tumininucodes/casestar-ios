@@ -21,7 +21,7 @@ struct MovieView: View {
                 image.resizable()
                     .imageScale(.small)
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 100, height: 150, alignment: .center)
+                    .frame(width: 115, height: 172, alignment: .center)
             } placeholder: {
                 Image("picture")
                     .resizable()
@@ -31,7 +31,7 @@ struct MovieView: View {
                     .frame(width: 20, height: 20, alignment: .center)
     
             }
-            .frame(width: 100, height: 150, alignment: .center)
+            .frame(width: 115, height: 172, alignment: .center)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             
             Spacer().frame(height: 10)

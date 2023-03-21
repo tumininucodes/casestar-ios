@@ -21,6 +21,7 @@
 		17BB8CF329C6F05500C07733 /* ApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB8CF229C6F05500C07733 /* ApiResponses.swift */; };
 		17BB8CF629C6F9BE00C07733 /* MainVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB8CF529C6F9BE00C07733 /* MainVIewModel.swift */; };
 		17BB8CF929C71F8F00C07733 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB8CF829C71F8F00C07733 /* FloatingActionButton.swift */; };
+		17C18EBF29C99B5000E5F395 /* YoutubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C18EBE29C99B5000E5F395 /* YoutubeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		17BB8CF229C6F05500C07733 /* ApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponses.swift; sourceTree = "<group>"; };
 		17BB8CF529C6F9BE00C07733 /* MainVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIewModel.swift; sourceTree = "<group>"; };
 		17BB8CF829C71F8F00C07733 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
+		17C18EBE29C99B5000E5F395 /* YoutubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,11 +73,11 @@
 		177EBE32298A400100992F32 /* casestar-ios */ = {
 			isa = PBXGroup;
 			children = (
+				177EBE33298A400100992F32 /* casestar_iosApp.swift */,
 				177EBE44298A417A00992F32 /* Models */,
 				177EBE43298A416F00992F32 /* Utils */,
 				177EBE42298A416400992F32 /* Services */,
 				177EBE41298A406400992F32 /* Views */,
-				177EBE33298A400100992F32 /* casestar_iosApp.swift */,
 				177EBE37298A400100992F32 /* Assets.xcassets */,
 				17BB8CF429C6F99B00C07733 /* ViewModel */,
 				177EBE39298A400100992F32 /* Preview Content */,
@@ -98,7 +100,6 @@
 				177EBE35298A400100992F32 /* HomeView.swift */,
 				177EBE45298A45E800992F32 /* CreditsView.swift */,
 				177EBE47298A550300992F32 /* FavoritesView.swift */,
-				17674ECC298FAF9A00E18834 /* MovieView.swift */,
 				175EFCEA29C8234600218692 /* AboutMovieView.swift */,
 			);
 			path = Views;
@@ -138,8 +139,10 @@
 		17BB8CF729C71F7E00C07733 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				17674ECC298FAF9A00E18834 /* MovieView.swift */,
 				17BB8CF829C71F8F00C07733 /* FloatingActionButton.swift */,
 				176FD93029C940EA00F61D6D /* ActorView.swift */,
+				17C18EBE29C99B5000E5F395 /* YoutubeView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				177C25F329C5912600B80C5A /* RemoteApi.swift in Sources */,
 				176FD93129C940EA00F61D6D /* ActorView.swift in Sources */,
 				17674ECD298FAF9A00E18834 /* MovieView.swift in Sources */,
+				17C18EBF29C99B5000E5F395 /* YoutubeView.swift in Sources */,
 				177EBE48298A550300992F32 /* FavoritesView.swift in Sources */,
 				177EBE36298A400100992F32 /* HomeView.swift in Sources */,
 				177EBE46298A45E800992F32 /* CreditsView.swift in Sources */,
