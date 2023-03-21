@@ -31,8 +31,12 @@ struct AboutMovieView: View {
                     }
                     
                 } else {
-                    ProgressView()
-                        .frame(height: 200)
+                    HStack {
+                        Spacer()
+                        ProgressView()
+                            .frame(height: 200)
+                        Spacer()
+                    }
                 }
 
 
