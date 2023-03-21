@@ -36,7 +36,7 @@ struct Actor: Codable {
 
 
 struct CastResponse: Codable {
-    var id: String?
+    var id: Int?
     var cast: [Actor]
 }
 

@@ -84,6 +84,7 @@ struct RemoteApi {
         return AF.request(base.appendingPathComponent("movie/\(movieId)/credits"), method: .get, parameters: params, encoding: URLEncoding.queryString, headers: self.headers())
             .publishDecodable(type: CastResponse.self, decoder: decoder)
             .tryCompactMap { (response) -> CastResponse? in
+                print(response.debugDescription)
                 if let error = response.error { throw error }
                 return response.value
             }.eraseToAnyPublisher()

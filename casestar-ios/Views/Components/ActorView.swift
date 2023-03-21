@@ -13,13 +13,13 @@ struct ActorView: View {
     var title: String
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             
             AsyncImage(url: URL(string: imageString)) { image in
                 image.resizable()
                     .imageScale(.small)
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 100, height: 150, alignment: .center)
+                    .frame(width: 100, height: 120, alignment: .center)
             } placeholder: {
                 Image("picture")
                     .resizable()
@@ -29,18 +29,17 @@ struct ActorView: View {
                     .frame(width: 20, height: 20, alignment: .center)
     
             }
-            .frame(width: 100, height: 150, alignment: .center)
+            .frame(width: 100, height: 120, alignment: .center)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             
-            Spacer().frame(height: 10)
-            
             Text(title)
-                .lineLimit(3)
+                .font(.caption)
+                .lineLimit(2)
                 .foregroundColor(.white)
-                .frame(height: 40)
+                .frame(width: 100, height: 40)
             
         }
-        .background(Color.gray)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .background(Color("dark"))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
