@@ -22,13 +22,24 @@ struct AboutMovieView: View {
                 
                 if !mainVM.videos.isEmpty {
 
-                    YouTubeView(videoId: mainVM.videos.first { $0.name?.contains("official trailer") ?? false }?.key ?? mainVM.videos.first?.key ?? "")
-                        .onAppear  {
-                            print("==============")
-                            print(mainVM.videos)
-                            print(mainVM.videos.first { $0.name?.contains("official trailer") ?? false }?.key ?? "")
-                        }
-                        .frame(height: 200)
+                    if mainVM.videos.first { $0.name?.contains("official trailer") ?? false } != nil {
+                        YouTubeView(videoId: mainVM.videos.first { $0.name?.contains("official trailer") ?? false }?.key ?? "")
+                            .onAppear  {
+                                print("==============")
+                                print(mainVM.videos)
+                                print(mainVM.videos.first { $0.name?.contains("official trailer") ?? false }?.key ?? "")
+                            }
+                            .frame(height: 200)
+                    } else {
+                        YouTubeView(videoId: mainVM.videos.first?.key ?? "")
+                            .onAppear  {
+                                print("==============")
+                                print(mainVM.videos)
+                                print(mainVM.videos.first { $0.name?.contains("official trailer") ?? false }?.key ?? "")
+                            }
+                            .frame(height: 200)
+                    }
+                    
                 }
 
 
